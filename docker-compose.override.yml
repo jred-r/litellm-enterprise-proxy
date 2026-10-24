@@ -1,6 +1,6 @@
 services:
   litellm-db:
-    image: postgres:latest
+    image: postgres:18.1
     environment:
       POSTGRES_DB: litellm_db
       POSTGRES_USER: litellm_admin
@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
 
   litellm-cache:
-    image: redis:latest
+    image: redis:8.4.7
     command: ["redis-server", "--requirepass", "${REDIS_PASSWORD:?Set REDIS_PASSWORD in .env}"]
     volumes:
       - redisdata:/data

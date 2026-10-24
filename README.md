@@ -29,9 +29,6 @@ and a [Google AI Studio API key](https://aistudio.google.com/apikey).
 The API is available at `http://localhost:8000`.
 The dashboard is available at `http://localhost:4000/ui/`.
 
-The local PostgreSQL `latest` tag can move to a new major version. Migrate an
-existing `pgdata` volume before recreating the database container.
-
 ## Create a client key
 
 Replace `<LITELLM_MASTER_KEY>` with the value from `.env`:
